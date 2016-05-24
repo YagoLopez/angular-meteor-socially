@@ -23,21 +23,18 @@ Implementation of [this Meteor advanced tutorial](http://www.angular-meteor.com/
 
 - You can log in with the following credentials: username: "usuario1@usuario1.com" and password: "usuario1" or you can create a user with new credentials.
 
-  ?
+
 
 
 
 ## Stack
 
-- Front-end: AngularJS 1.5.5 and EcmasScript 2015 (ES6)
+- **Front-end**: AngularJS 1.5.5 and EcmasScript 2015 (ES6)
+- **Back-end**: Meteor 1.3 and NodeJS
+- **Database**: MongoDB
+- **Realtime data:** WebSockets
 
-- Server: Meteor 1.3 and NodeJS
 
-- Database: MongoDB
-
-- Realtime data: WebSockets
-
-  ?
 
 
 
