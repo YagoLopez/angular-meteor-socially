@@ -1,0 +1,27 @@
+<head>
+    <title>Parties Manager</title>
+    <base href="/" />
+    <style>
+        form {padding: 5px;}
+        fieldset {margin: 10px;}
+        body {
+            font-family: verdana; font-size: small;
+            color: black;
+            background: whitesmoke}
+        .centered {text-align: center}
+        .floatRight {float: right; position:relative;}
+        .list {padding: 0px; list-style-type: none;}
+        .list li {background: aliceblue;}
+        .orange {color: orange}
+        .cornsilk {background: none !important;}
+    </style>
+</head>
+<body ng-app="socially">
+
+    <login-buttons></login-buttons>
+
+    <h1 class="centered">Parties Manager</h1>
+
+    <div ui-view></div>
+
+</body>

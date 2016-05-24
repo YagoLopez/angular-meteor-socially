@@ -1,0 +1,67 @@
+<div ng-if="!$root.userLoggedIn" class="centered">Log in to manage parties</div>
+
+<fieldset>
+    <legend>Parties List</legend>
+    <label>Order:
+        <select ng-model="sort">
+            <option value="1">Ascendig</option>
+            <option value="-1" ng-selected="true">Descending</option>
+        </select>
+    </label>
+    <p>
+        <label>Search:
+            <input type="search" ng-model="searchText" placeholder="Search Party"/>
+        </label>
+    </p>
+    <ul class="list" ng-if="totalParties > 0">
+        <li dir-paginate="party in parties | itemsPerPage: perPage" total-items="totalParties">
+            <button class="floatRight" ng-click="removeParty(party._id)"
+                    ng-if="$root.isEditable(party)">Delete</button>
+            <div>
+                <b>Name:</b>
+                <span ng-if="$root.isEditable(party)">
+                    <a ng-href="/parties/{{ party._id }}">{{ party.name }}</a>
+                </span>
+                <span ng-if="!$root.isEditable(party)">{{ party.name }}</span>
+            </div>
+
+            <div><b>Description:</b> {{ party.description }}</div>
+            <div><b>Created by:</b> <span class="orange">{{ party.ownerEmail }}</span></div>
+            <div><b>Creation date:</b> {{ party.createdAt }}</div>
+            <div ng-if="!party.location && $root.isEditable(party)">
+                <a ng-href="/parties/{{ party._id  }}" class="red">
+                    No location. Please add point to map &rarr;</a>
+            </div>
+
+            <party-rsvp party="party"></party-rsvp>
+
+            <div ng-if="$root.isEditable(party)">
+                <label> Public:
+                    <input type="checkbox" ng-model="party.public"
+                           ng-change="$root.setPrivacity(party._id, party.public)"/>
+                </label>
+            </div>
+            <hr/>
+        </li>
+    </ul>
+
+    <div ng-if="totalParties === 0" class="centered"><b>No parties</b></div>
+
+    <dir-pagination-controls ng-show="totalParties > 0"
+            on-page-change="pageChange(newPageNumber)"
+            template-url="client/components/partiesList/pagination.tpl.html">
+    </dir-pagination-controls>
+
+</fieldset>
+
+
+<party-add></party-add>
+
+<parties-map></parties-map>
+
+<!--DEBUG INFO:-->
+<!--<div>parties: {{ parties }}</div>-->
+<!--<div>current user: {{ $root.userLoggedIn  }}</div>-->
+<!--<div>total parties: {{ totalParties }}</div>-->
+<!-- /DEBUG INFO -->
+
