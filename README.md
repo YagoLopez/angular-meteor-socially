@@ -17,10 +17,19 @@ Implementation of [this Meteor advanced tutorial](http://www.angular-meteor.com/
 
 ## Demo
 
-- The demo is located at this url: 
-- The demo is hosted at Heroku.com as a sleeping process. It needs to be booted so it can take some time to start
+- The demo is located at this url: https://meteorsocially.herokuapp.com/
+- The demo is hosted at Heroku.com as a sleeping process. It needs to be booted so it can take some time to start.
+- Database is hosted at mLab.com in a free sandbox so threre may be latency.
 - You can log in with the following credentials: username: "usuario1@usuario1.com" and password: "usuario1" or you can create a user with new credentials.
+- Logged users can do CRUD operations to manage parties
+- Users can invite other users only to private parties
+- Private parties are only visible to his creators
+- Check the rest of the functional requirements at the [original tutorial](http://www.angular-meteor.com/tutorials/socially/angular1/bootstrapping)
 
+
+>
+>For testing the real time capabilities open another browser version in incognito mode. Changes made by one user in the data are inmediately propagated to the rest of users.
+>
 
 
 

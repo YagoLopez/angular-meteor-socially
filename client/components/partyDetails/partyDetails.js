@@ -21,7 +21,6 @@ app.component('partyDetails', {
                     alert('Location required. Click on the map to set location point');
                     return;
                 };
-                console.log('actualizando party', party);
                 var selector = {_id: party._id};
                 var modifier = {$set: {
                     name: party.name,

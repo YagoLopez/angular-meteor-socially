@@ -17,7 +17,6 @@ class PartyAddCtrl {
             party.createdAt = new Date();
             party.invitedUsers = [];
             party.location = null;
-            console.log('Adding party', party);
             Parties.insert(party);
             party.name = null;
             party.description = null;
