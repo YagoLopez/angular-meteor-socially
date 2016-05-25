@@ -46,4 +46,4 @@ Implementation of [this Meteor advanced tutorial](http://www.angular-meteor.com/
 
 
 ## Requirements for running the application
-- [Meteor Framework](http://www.meteor.com) 1.3+
+- [Meteor Framework](http://www.meteor.com) 1.3+ 
