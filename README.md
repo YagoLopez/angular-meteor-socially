@@ -7,9 +7,9 @@ Implementation of [this Meteor advanced tutorial](http://www.angular-meteor.com/
 
 ## Architecture:
 
-- **Client side code** are located in `/client/components/` directory (*.html templates, *.js components*, etc.)
-- **Code shared by client and server** are located in the `/imports/` directory. (For example, *models*)
-- **Server side code** are located in `/server/` directory (For example, *Meteor methods*)
+- **Client-side code** is located in `/client/components/` directory (*.html templates, *.js components*, etc.)
+- **Code shared by client and server** is located in the `/imports/` directory. (For example, *models*)
+- **Server-side code** is located in `/server/` directory (For example, *Meteor methods*)
 - **Dependencies**: main angular dependencies and imports are declared in the entry file: `/client/app.js`. The rest of the files only declare their own dependencies and the dependecy of `app.js`. This way the main dependencies are only declared one time and propagated to the other files. Compare this architecture with the code of the [original tutorial](http://www.angular-meteor.com/tutorials/socially/angular1/bootstrapping)
 
 
