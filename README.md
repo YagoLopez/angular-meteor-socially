@@ -18,9 +18,7 @@ Implementation of [this Meteor advanced tutorial](http://www.angular-meteor.com/
 ## Demo
 
 - The demo is located at this url: 
-
 - The demo is hosted at Heroku.com as a sleeping process. It needs to be booted so it can take some time to start
-
 - You can log in with the following credentials: username: "usuario1@usuario1.com" and password: "usuario1" or you can create a user with new credentials.
 
 
